@@ -1,7 +1,3 @@
-# hspring
-a project ...nothing.ha 
-
-
 #  Application Property Files
 
 SpringApplication loads properties from application.properties files in the following locations and adds them to the Spring Environment:
@@ -29,3 +25,38 @@ The list is ordered by precedence (properties defined in locations higher in the
 
 ``spring.config.addition-location`` 这个和``spring.config.location``的功能差不多，只是前置是附加在默认配置文件加载顺序上，后者完全不考虑默认的加载顺序，关于加载顺序的资料  点这里 
 [详细资料链接](https://docs.spring.io/spring-boot/docs/2.0.0.M7/reference/htmlsingle/#boot-features-external-config-application-property-files)
+
+#Log Format
+
+默认只在控制台输出日志信息
+输出的默认格式为
+- Date and Time — Millisecond precision and easily sortable.
+- Log Level — ERROR, WARN, INFO, DEBUG, or TRACE.
+- Process ID.
+- A --- separator to distinguish the start of actual log messages.
+- Thread name — Enclosed in square brackets (may be truncated for console output).
+- Logger name — This is usually the source class name (often abbreviated).
+The log message.
+
+开启调试信息输出，可以在命令行执行增加``--debug``参数;
+You can also specify ``debug=true ``in your ``application.properties``.
+
+可以配置输出颜色。这个。。默认就好吧 
+
+## 日志文件配置
+- 默认文件10M大小，滚动记录，
+- logging.file 不用说了吧，可以是绝对或相对位置或名称
+- logging.path 同上
+- logging.file.max-size 文件大小
+- logging.file.max-history 文件历史，不配置永久保留之前的日志文件
+## Log Levels
+这个直接粘贴原文吧
+
+All the supported logging systems can have the logger levels set in the Spring Environment (for example, in application.properties) by using ‘logging.level.*=LEVEL’ where ‘LEVEL’ is one of TRACE, DEBUG, INFO, WARN, ERROR, FATAL, or OFF. The root logger can be configured by using logging.level.root. The following example shows potential logging settings in application.properties:
+```
+logging.level.root=WARN
+logging.level.org.springframework.web=DEBUG
+logging.level.org.hibernate=ERROR
+```
+
+支持配置其他的日志记录系统
