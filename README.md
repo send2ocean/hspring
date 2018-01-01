@@ -60,3 +60,7 @@ logging.level.org.hibernate=ERROR
 ```
 
 支持配置其他的日志记录系统
+
+# Customizing the Banner
+
+The banner that is printed on start up can be changed by adding a banner.txt file to your classpath or by setting the banner.location property to the location of such a file. If the file has an encoding other than UTF-8, you can set banner.charset. In addition to a text file, you can also add a banner.gif, banner.jpg, or banner.png image file to your classpath or set the banner.image.location property. Images are converted into an ASCII art representation and printed above any text banner.
