@@ -1,2 +1,11 @@
 server:
     port:8000
+spring:
+    datasource:
+        driver-class-name:com.mysql.jdbc.Driver
+        url:jdbc:mysql://127.0.0.1:33060/test
+        username:test
+        password:abc123
+mybatis:
+    type-aliases-package:com.sys.entity
+    executorType：SIMPLE //设置执行模式（SIMPLE, REUSE, BATCH），默认为SIMPLE

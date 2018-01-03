@@ -33,23 +33,7 @@ public class MyConfiguration {
 				registry.addMapping("/api/**");
 			}
 
-			@Override
-			public void addArgumentResolvers(List<HandlerMethodArgumentResolver> arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void addFormatters(FormatterRegistry arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void addInterceptors(InterceptorRegistry arg0) {
-				// TODO Auto-generated method stub
-				
-			}
+			 
 
 			@Override
 			public void addResourceHandlers(ResourceHandlerRegistry arg0) {
@@ -133,6 +117,30 @@ public class MyConfiguration {
 			public Validator getValidator() {
 				// TODO Auto-generated method stub
 				return null;
+			}
+
+
+
+			@Override
+			public void addArgumentResolvers(List<HandlerMethodArgumentResolver> arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+
+
+
+			@Override
+			public void addFormatters(FormatterRegistry arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+
+
+
+			@Override
+			public void addInterceptors(InterceptorRegistry arg0) {
+				// TODO Auto-generated method stub
+				
 			}
 		};
 	}
