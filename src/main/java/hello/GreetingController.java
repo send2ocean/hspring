@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sys.entity.TestTable;
-import com.sys.mapper.TestInterface;
+import com.sys.entity.Txl;
+import com.sys.mapper.TxlInterface;
 
 @RestController
 public class GreetingController {
@@ -18,7 +18,7 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
     
     @Autowired
-    private TestInterface testInterface;
+    private TxlInterface txlInterface;
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
@@ -27,8 +27,8 @@ public class GreetingController {
     }
     
     @RequestMapping("/test")
-    public List<TestTable> test(@RequestParam(value="name", defaultValue="World") String name) {
-        return  testInterface.getAll();
+    public List<Txl> test(@RequestParam(value="name", defaultValue="World") String name) {
+        return  txlInterface.getAll();
     }
     
 }

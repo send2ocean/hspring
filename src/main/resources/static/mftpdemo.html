@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+<title>文档的标题</title>
+</head>
+
+<body>
+控件的内容......
+ 
+ 
+ <OBJECT ID="TestOCX" WIDTH="100" HEIGHT="50" CLASSID="CLSID:43559281-DABD-11D0-9E15-444553540000">
+
+</OBJECT>
+</body>
+
+ 
+<script type="text/javascript">
+//document.write("Hello World!")
+
+
+function init(){
+console.log(TestOCX)
+	if (!window.ActiveXObject) {
+			alert("对不起，证书登陆请使用IE浏览器！")
+			return
+	}
+	
+	var   isConnected = true
+	try{
+		TestOCX.Host = "47.94.139.253"
+		TestOCX.Port = "2222"
+        TestOCX.LogonName = "hotel"
+        TestOCX.LogonPassword = "!QAZ2wsx"
+		console.log(TestOCX.Host)
+		TestOCX.Connect()
+		TestOCX.PutFile("d:/zhouhuaifu.jpg", "/zhouhuaifu.jpg")
+		TestOCX.Disconnect()
+	}catch(e){
+		console.log(e)
+	}
+	 
+	console.log("test end")
+}
+init()
+</script>
+</html>
