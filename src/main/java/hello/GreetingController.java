@@ -1,6 +1,8 @@
 package hello;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,12 @@ public class GreetingController {
     @RequestMapping("/test")
     public List<Txl> test(@RequestParam(value="name", defaultValue="World") String name) {
         return  txlInterface.getAll();
+    }
+    @RequestMapping("/txls")
+    public Map txls(@RequestParam(value="name", defaultValue="World") String name) {
+    		Map ret = new HashMap();
+    		ret.put("data", txlInterface.getAll());
+        return  ret;
     }
     
 }

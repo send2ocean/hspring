@@ -1,10 +1,10 @@
 server:
-    port: 8000
+    port: 8001
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://172.19.44.20:3306/jrsite
-        username: root
-        password: root
+        url: jdbc:mysql://127.0.0.1:33060/test
+        username: test
+        password: abc123
 mybatis:
     type-aliases-package: com.sys.entity

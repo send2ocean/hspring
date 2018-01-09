@@ -30,6 +30,8 @@ public class Txl implements Serializable {
 	
 	private String telNo;
 	
+	private int DT_RowId;
+	
 	public String getDept() {
 		return dept;
 	}
@@ -78,6 +80,14 @@ public class Txl implements Serializable {
 
 	public void setTelNo(String telNo) {
 		this.telNo = telNo;
+	}
+
+	public int getDT_RowId() {
+		return DT_RowId;
+	}
+
+	public void setDT_RowId(int dT_RowId) {
+		DT_RowId = dT_RowId;
 	}
 	
 	
